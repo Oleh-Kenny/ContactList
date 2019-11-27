@@ -3,8 +3,8 @@ import "./contactitem.css";
  
 const ContactItem = () =>{
     return(
-        <div class="row">
-        <div class="col-sm-6">
+        <div class="row d-flex justify-content-center">
+        <div class="col-8 ">
             <div class="panel">
                 <div class="panel-body p-t-10">
                     <div class="media-main">
@@ -50,7 +50,7 @@ const ContactItem = () =>{
         
 
 
-<div class="col-sm-6">
+<div class="col-8">
     <div class="panel">
         <div class="panel-body p-t-10">
             <div class="media-main">
