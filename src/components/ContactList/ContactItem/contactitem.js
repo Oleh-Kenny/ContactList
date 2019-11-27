@@ -4,14 +4,14 @@ import "./contactitem.css";
 const ContactItem = () =>{
     return(
         <div className="row d-flex justify-content-center">
-        <div className="col-8 ">
+        <div className="col-7 ">
             <div className="panel">
                 <div className="panel-body p-t-10">
                     <div className="media-main">
                         <a className="pull-left" href="#" >
                             <img className="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
                         </a>
-                        <div className="pull-right btn-group-sm">
+                        <div className="pull-right btn-group-sm butt">
                             <a href="#" className="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
                                 <i className="fa fa-pencil"></i>
                             </a>
@@ -26,7 +26,7 @@ const ContactItem = () =>{
                     </div>
                     <div className="clearfix">
                     <hr/>
-                    <ul className="social-links list-inline p-b-10">
+                    <ul className="social-links list-inline p-b-10 col-5">
                         <li>
                             <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
                         </li>
@@ -42,7 +42,9 @@ const ContactItem = () =>{
                         <li>
                             <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
                         </li>
+                       
                     </ul>
+                    <button className="btn btn-outline-primary true col-2 offset-4">Edit</button>
                 </div>
             </div>
         </div>
@@ -50,14 +52,14 @@ const ContactItem = () =>{
         
 
 
-<div className="col-8">
+<div className="col-7">
     <div className="panel">
         <div className="panel-body p-t-10">
             <div className="media-main">
                 <a className="pull-left" href="#">
                     <img className="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
                 </a>
-                <div className="pull-right btn-group-sm">
+                <div className="pull-right btn-group-sm butt">
                     <a href="#" className="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
                         <i className="fa fa-pencil"></i>
                     </a>
@@ -72,7 +74,7 @@ const ContactItem = () =>{
             </div>
             <div className="clearfix">
             <hr/>
-            <ul className="social-links list-inline p-b-10">
+            <ul className="social-links list-inline p-b-10 col-5">
                 <li>
                     <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Facebook"><i className="fa fa-facebook"></i></a>
                 </li>
@@ -89,6 +91,7 @@ const ContactItem = () =>{
                     <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Message"><i className="fa fa-envelope-o"></i></a>
                 </li>
             </ul>
+            <button className="btn btn-outline-primary true col-2 offset-4">Edit</button>
         </div>
     </div>
 </div>

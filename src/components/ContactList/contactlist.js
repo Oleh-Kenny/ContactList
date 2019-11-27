@@ -6,7 +6,7 @@ import ContactItem from "./ContactItem/contactitem";
 const ContactList = () =>{
     return (
         <Fragment>
-        <h2>Contact</h2>
+        <h2 className="col-7 d-flex justify-content-center">Contact</h2>
         <ContactItem></ContactItem>
         </Fragment>
     );

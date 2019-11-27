@@ -4,7 +4,7 @@ import "./search.css";
 const Search = () =>{
     return(     
     <div class="row d-flex justify-content-center">
-    <div className="col-8">
+    <div className="col-7">
         <div className="panel panel-default">
             <div className="panel-body p-t-0">
                 <div className="input-group">
