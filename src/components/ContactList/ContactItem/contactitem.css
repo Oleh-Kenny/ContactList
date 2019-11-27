@@ -1,0 +1,13 @@
+.panel {
+  background: #fff;
+}
+.thumb-lg{
+  border-radius: 50%;
+} 
+ul li{      
+display: inline;
+}
+li{
+  padding-right:0.35%;
+  padding-left: 0.35%;
+}
