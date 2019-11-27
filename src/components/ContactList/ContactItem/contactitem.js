@@ -3,30 +3,30 @@ import "./contactitem.css";
  
 const ContactItem = () =>{
     return(
-        <div class="row d-flex justify-content-center">
-        <div class="col-8 ">
-            <div class="panel">
-                <div class="panel-body p-t-10">
-                    <div class="media-main">
-                        <a class="pull-left" href="#" >
-                            <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
+        <div className="row d-flex justify-content-center">
+        <div className="col-8 ">
+            <div className="panel">
+                <div className="panel-body p-t-10">
+                    <div className="media-main">
+                        <a className="pull-left" href="#" >
+                            <img className="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
                         </a>
-                        <div class="pull-right btn-group-sm">
-                            <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                <i class="fa fa-pencil"></i>
+                        <div className="pull-right btn-group-sm">
+                            <a href="#" className="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                                <i className="fa fa-pencil"></i>
                             </a>
-                            <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                                <i class="fa fa-close"></i>
+                            <a href="#" className="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                                <i className="fa fa-close"></i>
                             </a>
                         </div>
-                        <div class="info">
+                        <div className="info">
                             <h4>Jonathan Smith</h4>
-                            <p class="text-muted">Graphics Designer</p>
+                            <p className="text-muted">Graphics Designer</p>
                         </div>
                     </div>
-                    <div class="clearfix">
+                    <div className="clearfix">
                     <hr/>
-                    <ul class="social-links list-inline p-b-10">
+                    <ul className="social-links list-inline p-b-10">
                         <li>
                             <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
                         </li>
@@ -50,43 +50,43 @@ const ContactItem = () =>{
         
 
 
-<div class="col-8">
-    <div class="panel">
-        <div class="panel-body p-t-10">
-            <div class="media-main">
-                <a class="pull-left" href="#" >
-                    <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
+<div className="col-8">
+    <div className="panel">
+        <div className="panel-body p-t-10">
+            <div className="media-main">
+                <a className="pull-left" href="#">
+                    <img className="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
                 </a>
-                <div class="pull-right btn-group-sm">
-                    <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                        <i class="fa fa-pencil"></i>
+                <div className="pull-right btn-group-sm">
+                    <a href="#" className="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                        <i className="fa fa-pencil"></i>
                     </a>
-                    <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                        <i class="fa fa-close"></i>
+                    <a href="#" className="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                        <i className="fa fa-close"></i>
                     </a>
                 </div>
-                <div class="info">
+                <div className="info">
                     <h4>Jonathan Smith</h4>
-                    <p class="text-muted">Graphics Designer</p>
+                    <p className="text-muted">Graphics Designer</p>
                 </div>
             </div>
-            <div class="clearfix">
+            <div className="clearfix">
             <hr/>
-            <ul class="social-links list-inline p-b-10">
+            <ul className="social-links list-inline p-b-10">
                 <li>
-                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Facebook"><i className="fa fa-facebook"></i></a>
                 </li>
                 <li>
-                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i className="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i className="fa fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i className="fa fa-skype"></i></a>
                 </li>
                 <li>
-                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+                    <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Message"><i className="fa fa-envelope-o"></i></a>
                 </li>
             </ul>
         </div>
