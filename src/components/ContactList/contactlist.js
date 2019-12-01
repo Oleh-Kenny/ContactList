@@ -10,7 +10,13 @@ const ContactList = ({ContactList}) =>{
         avatar={item.avatar} 
         name={item.name} 
         description={item.description}
-        gender={item.gender}></ContactItem>
+        gender={item.gender}
+        facebbok={item.facebooklist}
+        twitt={item.twitterList}
+        linked={item.linkeDin}
+        skyPe={item.skype}
+        messs={item.messager}>
+        </ContactItem>
     })
     return (
         <Fragment>

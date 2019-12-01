@@ -8,16 +8,60 @@ import ContactList from "./components/ContactList/contactlist";
     class App extends React.Component{
 
     List = [
-        {name:"jack Sparrow", description:"Capitan", avatar:
-        58,gender:"men"},
-        {name:"Tommy Sparrow", description:"Treny",avatar:
-        33, gender:"women"},
-        {name:"Tor Sparrow", description:"Distructor",avatar:
-        18, gender:"men"},
-        {name:"Cris Nollan", description:"Cowboy", avatar:
-        5, gender:"women"},
-        {name:"Silvestr Stalone", description:"Descriptor", avatar:
-        80, gender:"men"}
+        {name:"Jack Sparrow", 
+        description:"Capitan", 
+        avatar:58,
+        gender:"men", 
+        facebooklist:"CaptainJackSparrow",
+        twitterList:"BlueEugeo_4y",
+        linkeDin:"jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
+        skype:"uk",
+        messager:"uk/mm",
+    },
+
+        {name:"Julia Roberts", 
+        description:"Treny",
+        avatar:33, 
+        gender:"women",
+        facebooklist:"pages/category/Actor/Julia-Roberts-officiel-134054339970575/",
+        twitterList:"juliaroberts",
+        linkeDin:"jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
+        skype:"uk",
+        messager:"uk/mm"
+    },
+
+        {name:"Geoffrey Rush", 
+        description:"Distructor",
+        avatar:18, 
+        gender:"men",
+        facebooklist:"Geoffrey-Rush-419192964762662/",
+        twitterList:"geoffreyrush",
+        linkeDin:"jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
+        skype:"uk",
+        messager:"uk/mm"
+        },
+
+        {name:"Gal Gadot", 
+        description:"Cowboy", 
+        avatar:75, 
+        gender:"women",
+        facebooklist:"GalGadot/",
+        twitterList:"galgadot",
+        linkeDin:"jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
+        skype:"uk",
+        messager:"uk/mm"
+    },
+
+        {name:"Sylvester Stallone", 
+        description:"Descriptor", 
+        avatar: 1, 
+        gender:"men",
+        facebooklist:"SylvesterStallone/",
+        twitterList:"theslystallone",
+        linkeDin:"jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
+        skype:"uk",
+        messager:"uk/mm"  
+    }
     ];
 
 render(){
