@@ -32,3 +32,29 @@ color: #fff;
 transform: rotateX(360deg);
 transition: 1.5s  ease-in-out;
 }
+.btn-success {
+  color: #fff;
+  background-color: #3bc0c3;
+  border-color: #3bc0c3;
+  margin: 0 3px;
+}
+.btn-success:hover {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  transform: rotateY(360deg);
+  transition:  ease-in-out 1.5s;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #f16c79;
+  border-color: #f16c79;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color:#d40015d1;
+  border-color: #d40015d1;
+  transform: rotateY(360deg);
+  transition: 1.5s  ease-in-out;
+}
