@@ -42,7 +42,7 @@ li{
   border-radius: 50%;
   -webkit-border-radius: 50%;
   color: #7A7676;
-  transition: 1.5s  ease-in-out;
+  transition: 1.2s  ease-in-out;
 }
 li a:hover{
 background: #007bff;
@@ -55,7 +55,7 @@ transform: rotateX(360deg);
   background-color: #3bc0c3;
   border-color: #3bc0c3;
   margin: 0 3px;
-  transition:  ease-in-out 1.5s;
+  transition:  ease-in-out 1.2s;
 }
 .btn-success:hover {
   color: #fff;
@@ -68,7 +68,7 @@ transform: rotateX(360deg);
   color: #fff;
   background-color: #f16c79;
   border-color: #f16c79;
-  transition: 1.5s  ease-in-out;
+  transition: 1.2s  ease-in-out;
 }
 .btn-danger:hover {
   color: #fff;
