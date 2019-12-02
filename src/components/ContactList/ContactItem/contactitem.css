@@ -26,3 +26,9 @@ li{
   width: 100px;
   margin-left: 1.5%;
 }
+li a:hover{
+background: #007bff;
+color: #fff;
+transform: rotateX(360deg);
+transition: 1.5s  ease-in-out;
+}
