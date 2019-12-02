@@ -5,7 +5,7 @@ const Search = () =>{
     return(     
     <div class="row d-flex justify-content-center">
     <div className="col-7">
-        <div className="panel panel-default">
+        <div className="panel2 panel-default">
             <div className="panel-body p-t-0">
                 <div className="input-group">
                     <input type="text" id="example-input1-group2" name="example-input1-group2" className="form-control" placeholder="Search" />
