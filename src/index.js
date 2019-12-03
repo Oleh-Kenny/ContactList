@@ -22,7 +22,7 @@ class App extends React.Component {
     {
       name: "Julia Roberts",
       description: "Treny",
-      avatar: 33,
+      avatar: 32,
       gender: "women",
       facebooklist:
         "pages/category/Actor/Julia-Roberts-officiel-134054339970575/",
