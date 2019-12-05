@@ -11,11 +11,40 @@ class ContactItem extends React.Component {
     twitt: this.props.twitt,
     linked: this.props.linked,
     messs: this.props.messs,
-    skyPe: this.props.skyPe
+    skyPe: this.props.skyPe,
+    btnStatus: false,
+    brdStat: false,
+    starStat: false
   };
   RandomA = () => {
     const newAv = Math.floor(Math.random() * 100);
-    this.setState({ avatar: newAv });
+    this.setState({ avatar: newAv, btnStatus: !this.state.btnStatus });
+  };
+  setStarAct = () => {
+    this.setState({
+      starStat: true
+    });
+  };
+  setStarNoAct = () => {
+    this.setState({
+      starStat: false
+    });
+  };
+
+  bordStylesAct = () => {
+    this.setState({
+      brdStat: true
+    });
+  };
+  bordStylesNoAct = () => {
+    this.setState({
+      brdStat: false
+    });
+  };
+  Cool = () => {
+    this.setState({
+      starStat: !this.state.starStat
+    });
   };
 
   render() {
@@ -36,10 +65,29 @@ class ContactItem extends React.Component {
     let lin = `https://www.linkedin.com/${linked}`;
     let sky = `https://www.skype.com/${skyPe}`;
     let me = `https://kyivstar.ua/${messs}`;
+    let btnStyles = "btn btn-outline-primary true col-2 offset-4";
+    let border = "panel p-t-10";
+    let starStat = "color";
+
+    if (this.state.btnStatus) {
+      btnStyles = " btn btn-danger true col-2 offset-4";
+    }
+
+    if (this.state.brdStat) {
+      border = "panel p-t-10 brdStat";
+    }
+    if (this.state.starStat) {
+      starStat = "stars-colored";
+    }
+
     return (
       <div className="row d-flex justify-content-center">
         <div className="col-7 ">
-          <div className="panel">
+          <div
+            className={border}
+            onMouseEnter={this.bordStylesAct}
+            onMouseLeave={this.bordStylesNoAct}
+          >
             <div className="panel-body p-t-10">
               <div className="media-main">
                 <a className="pull-left" href="#">
@@ -139,10 +187,11 @@ class ContactItem extends React.Component {
                     </a>
                   </li>
                 </ul>
-                <button
-                  className="btn btn-outline-primary true col-2 offset-4"
-                  onClick={this.RandomA}
-                >
+                <span onClick={this.Cool} className={starStat}>
+                  <i className="fa fa-star"></i>
+                </span>
+
+                <button className={btnStyles} onClick={this.RandomA}>
                   Random
                 </button>
               </div>

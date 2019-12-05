@@ -73,3 +73,18 @@ li a:hover {
   border-color: #d40015d1;
   transform: rotateY(360deg);
 }
+.brdStat {
+  border: 2px solid #3bc0c3 !important;
+  box-shadow: 2px 3px 3px skyblue;
+}
+.color {
+  color: rgb(235, 231, 231);
+  cursor: pointer;
+  transform: rotateY(360deg);
+}
+.stars-colored {
+  color: gold;
+  text-shadow: 1px 1px 1px black;
+  transition: 1.2s ease-in-out;
+}
+
