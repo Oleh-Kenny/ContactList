@@ -9,7 +9,7 @@ const Search = () =>{
             <div className="panel-body p-t-0">
                 <div className="input-group">
                     <input type="text" id="example-input1-group2" name="example-input1-group2" className="form-control" placeholder="Search" />
-                    <span className="input-group-btn">
+                    <span className="input-group-btn top">
                         <button type="button" class="btn btn-effect-ripple btn-primary"><i className="fa fa-search"></i></button>
                     </span>
                 </div>

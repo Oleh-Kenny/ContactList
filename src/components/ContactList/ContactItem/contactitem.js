@@ -14,7 +14,11 @@ class ContactItem extends React.Component {
     skyPe: this.props.skyPe,
     btnStatus: false,
     brdStat: false,
-    starStat: false
+    starStat: false,
+    starStat2: false,
+    starStat3: false,
+    starStat4: false,
+    starStat5: false
   };
   RandomA = () => {
     const newAv = Math.floor(Math.random() * 100);
@@ -35,6 +39,7 @@ class ContactItem extends React.Component {
     this.setState({
       brdStat: true
     });
+    
   };
   bordStylesNoAct = () => {
     this.setState({
@@ -45,6 +50,31 @@ class ContactItem extends React.Component {
     this.setState({
       starStat: !this.state.starStat
     });
+   
+  };
+  Cool2 = () => {
+    this.setState({
+      starStat2: !this.state.starStat2
+    });
+   
+  };
+  Cool3 = () => {
+    this.setState({
+      starStat3: !this.state.starStat3
+    });
+   
+  };
+  Cool4 = () => {
+    this.setState({
+      starStat4: !this.state.starStat4
+    });
+   
+  };
+  Cool5 = () => {
+    this.setState({
+      starStat5: !this.state.starStat5
+    });
+   
   };
 
   render() {
@@ -65,12 +95,16 @@ class ContactItem extends React.Component {
     let lin = `https://www.linkedin.com/${linked}`;
     let sky = `https://www.skype.com/${skyPe}`;
     let me = `https://kyivstar.ua/${messs}`;
-    let btnStyles = "btn btn-outline-primary true col-2 offset-4";
+    let btnStyles = "btn btn-outline-primary true col-2 offset-2";
     let border = "panel p-t-10";
     let starStat = "color";
+    let starStat2 = "color";
+    let starStat3 = "color";
+    let starStat4 = "color";
+    let starStat5 = "color";
 
     if (this.state.btnStatus) {
-      btnStyles = " btn btn-danger true col-2 offset-4";
+      btnStyles = " btn btn-danger true col-2 offset-2";
     }
 
     if (this.state.brdStat) {
@@ -78,6 +112,18 @@ class ContactItem extends React.Component {
     }
     if (this.state.starStat) {
       starStat = "stars-colored";
+    }
+    if (this.state.starStat2) {
+      starStat2 = "stars-colored";
+    }
+    if (this.state.starStat3) {
+      starStat3 = "stars-colored";
+    }
+    if (this.state.starStat4) {
+      starStat4 = "stars-colored";
+    }
+    if (this.state.starStat5) {
+      starStat5 = "stars-colored";
     }
 
     return (
@@ -188,6 +234,18 @@ class ContactItem extends React.Component {
                   </li>
                 </ul>
                 <span onClick={this.Cool} className={starStat}>
+                  <i className="fa fa-star"></i>
+                </span>
+                <span onClick={this.Cool2} className={starStat2}>
+                  <i className="fa fa-star"></i>
+                </span>
+                <span onClick={this.Cool3} className={starStat3}>
+                  <i className="fa fa-star"></i>
+                </span>
+                <span onClick={this.Cool4} className={starStat4}>
+                  <i className="fa fa-star"></i>
+                </span>
+                <span onClick={this.Cool5} className={starStat5}>
                   <i className="fa fa-star"></i>
                 </span>
 

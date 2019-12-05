@@ -82,9 +82,18 @@ li a:hover {
   cursor: pointer;
   transform: rotateY(360deg);
 }
+.color:hover{
+  text-shadow: 1px 1px 1px  rgb(66, 66, 66);
+}
 .stars-colored {
   color: gold;
   text-shadow: 1px 1px 1px black;
   transition: 1.2s ease-in-out;
 }
+span{
+  margin-left: 2px;
+}
 
+button{
+  margin-left: 5px;
+}
