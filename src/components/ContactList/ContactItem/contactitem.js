@@ -14,7 +14,7 @@ class ContactItem extends React.Component {
     skyPe: this.props.skyPe,
     btnStatus: false,
     brdStat: false,
-    starStat: false,
+    starStat: this.props.favorite,
     starStat2: false,
     starStat3: false,
     starStat4: false,
@@ -39,7 +39,6 @@ class ContactItem extends React.Component {
     this.setState({
       brdStat: true
     });
-    
   };
   bordStylesNoAct = () => {
     this.setState({
@@ -50,31 +49,26 @@ class ContactItem extends React.Component {
     this.setState({
       starStat: !this.state.starStat
     });
-   
   };
   Cool2 = () => {
     this.setState({
       starStat2: !this.state.starStat2
     });
-   
   };
   Cool3 = () => {
     this.setState({
       starStat3: !this.state.starStat3
     });
-   
   };
   Cool4 = () => {
     this.setState({
       starStat4: !this.state.starStat4
     });
-   
   };
   Cool5 = () => {
     this.setState({
       starStat5: !this.state.starStat5
     });
-   
   };
 
   render() {
@@ -155,6 +149,7 @@ class ContactItem extends React.Component {
                     data-placement="top"
                     data-toggle="tooltip"
                     data-original-title="Delete"
+                    onClick={this.props.onDelete}
                   >
                     <i className="fa fa-close"></i>
                   </a>

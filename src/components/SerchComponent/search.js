@@ -3,14 +3,14 @@ import "./search.css";
 
 const Search = () =>{
     return(     
-    <div class="row d-flex justify-content-center">
+    <div className="row d-flex justify-content-center">
     <div className="col-7">
         <div className="panel panel-default">
             <div className="panel-body p-t-0">
                 <div className="input-group">
                     <input type="text" id="example-input1-group2" name="example-input1-group2" className="form-control" placeholder="Search" />
                     <span className="input-group-btn top">
-                        <button type="button" class="btn btn-effect-ripple btn-primary"><i className="fa fa-search"></i></button>
+                        <button type="button" className="btn btn-effect-ripple btn-primary"><i className="fa fa-search"></i></button>
                     </span>
                 </div>
             </div>
