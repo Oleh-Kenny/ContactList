@@ -2,11 +2,12 @@ import React, { Fragment } from "react";
 import "./contactlist.css";
 import ContactItem from "./ContactItem/contactitem";
 
-const ContactList = ({ ContactList }) => {
+const ContactList = ({ ContactList,  onDelete }) => {
   console.log("Arrey =>", ContactList);
   const listIthem = ContactList.map(item => {
     return (
       <ContactItem
+      key={item.id}
         avatar={item.avatar}
         name={item.name}
         description={item.description}
@@ -16,6 +17,8 @@ const ContactList = ({ ContactList }) => {
         linked={item.linkeDin}
         skyPe={item.skype}
         messs={item.messager}
+        favorite={item.favorite}
+        onDelete ={()=>  onDelete(item.id)}
       ></ContactItem>
     );
   });
