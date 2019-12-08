@@ -35,7 +35,7 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:true
+        favorite:false
       },
 
       {
@@ -65,7 +65,7 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:true
+        favorite:false
       },
 
       {
@@ -125,3 +125,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
