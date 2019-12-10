@@ -14,8 +14,7 @@ class ContactItem extends React.Component {
     skyPe: this.props.skyPe,
     btnStatus: false,
     brdStat: false,
-    starStat: this.props.favorite,
-   
+    starStat: this.props.favorite
   };
   RandomA = () => {
     const newAv = Math.floor(Math.random() * 100);

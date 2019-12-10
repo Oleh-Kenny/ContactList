@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Search from "./components/SerchComponent/search";
 import ContactList from "./components/ContactList/contactlist";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import About from "./components/About/About";
+import AddContact from "./components/AddContact/AddContact";
+import NotFound from "./components/NotFound/NotFound";
+import Edit from "./components/Edit/Edit";
+import MainMenue from "./components/menu/menu";
 class App extends React.Component {
   state = {
     List: [
@@ -108,34 +112,44 @@ class App extends React.Component {
     let newList = this.state.List.slice();
     newList[index].favorite = !newList[index].favorite;
 
-    if (newList[index].favorite) {
-      newList[index].id = newList[index].id * 10;
-    } else {
-      newList[index].id = newList[index].id / 10;
-    }
+   
 
-    this.setState(state => {
+    this.setState(() => {
       return {
-        List: newList
+        favorite: newList
       };
     });
   };
 
   render() {
     return (
-      <div className="container bootstrap snippet">
-        <h1 className="col-6 offset-3 d-flex justify-content-center">
-          Contact List
-        </h1>
-        <Search></Search>
-        <ContactList
+      <Router>
+<div className="container bootstrap snippet">
+<MainMenue></MainMenue>
+<Switch>
+<Route
+path="/"
+exact
+component={() => (
+<ContactList
           ContactList={this.state.List}
           onDelete={this.onDelete}
           StarFavor={this.StarFavor}
         ></ContactList>
-      </div>
+)}
+></Route>
+<Route path="/about" exact component={About}></Route>
+<Route path="/add" exact component={AddContact}></Route>
+<Router path="/edit" exact component={Edit}></Router>
+<Router path="*" exact component={NotFound}></Router>
+
+</Switch>
+</div>
+</Router>
+
     );
   }
 }
+
 
 ReactDOM.render(<App />, document.getElementById("root"));

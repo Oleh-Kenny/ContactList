@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import "./contactlist.css";
 import ContactItem from "./ContactItem/contactitem";
+import SerchComponent from "../SerchComponent/search";
+
 
 const ContactList = ({ ContactList, onDelete, StarFavor }) => {
   console.log("Arrey =>", ContactList);
@@ -24,10 +26,13 @@ const ContactList = ({ ContactList, onDelete, StarFavor }) => {
     );
   });
   return (
+   
     <Fragment>
+       <SerchComponent></SerchComponent>
       <h2 className="col-7 d-flex justify-content-center">Contact</h2>
       {listIthem}
     </Fragment>
+    
   );
 };
 export default ContactList;
