@@ -15,10 +15,7 @@ class ContactItem extends React.Component {
     btnStatus: false,
     brdStat: false,
     starStat: this.props.favorite,
-    starStat2: false,
-    starStat3: false,
-    starStat4: false,
-    starStat5: false
+   
   };
   RandomA = () => {
     const newAv = Math.floor(Math.random() * 100);
@@ -45,31 +42,6 @@ class ContactItem extends React.Component {
       brdStat: false
     });
   };
-  /* Cool = () => {
-    this.setState({
-      starStat: !this.state.starStat
-    });
-  };
-  Cool2 = () => {
-    this.setState({
-      starStat2: !this.state.starStat2
-    });
-  };
-  Cool3 = () => {
-    this.setState({
-      starStat3: !this.state.starStat3
-    });
-  };
-  Cool4 = () => {
-    this.setState({
-      starStat4: !this.state.starStat4
-    });
-  };
-  Cool5 = () => {
-    this.setState({
-      starStat5: !this.state.starStat5
-    });
-  };*/
 
   render() {
     const {
