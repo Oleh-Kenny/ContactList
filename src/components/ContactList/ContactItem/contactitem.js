@@ -45,7 +45,7 @@ class ContactItem extends React.Component {
       brdStat: false
     });
   };
-  Cool = () => {
+  /* Cool = () => {
     this.setState({
       starStat: !this.state.starStat
     });
@@ -69,7 +69,7 @@ class ContactItem extends React.Component {
     this.setState({
       starStat5: !this.state.starStat5
     });
-  };
+  };*/
 
   render() {
     const {
@@ -89,16 +89,12 @@ class ContactItem extends React.Component {
     let lin = `https://www.linkedin.com/${linked}`;
     let sky = `https://www.skype.com/${skyPe}`;
     let me = `https://kyivstar.ua/${messs}`;
-    let btnStyles = "btn btn-outline-primary true col-2 offset-2";
+    let btnStyles = "btn btn-outline-primary true col-2 offset-4";
     let border = "panel p-t-10";
     let starStat = "color";
-    let starStat2 = "color";
-    let starStat3 = "color";
-    let starStat4 = "color";
-    let starStat5 = "color";
 
     if (this.state.btnStatus) {
-      btnStyles = " btn btn-danger true col-2 offset-2";
+      btnStyles = " btn btn-danger true col-2 offset-4";
     }
 
     if (this.state.brdStat) {
@@ -106,18 +102,6 @@ class ContactItem extends React.Component {
     }
     if (this.state.starStat) {
       starStat = "stars-colored";
-    }
-    if (this.state.starStat2) {
-      starStat2 = "stars-colored";
-    }
-    if (this.state.starStat3) {
-      starStat3 = "stars-colored";
-    }
-    if (this.state.starStat4) {
-      starStat4 = "stars-colored";
-    }
-    if (this.state.starStat5) {
-      starStat5 = "stars-colored";
     }
 
     return (
@@ -228,19 +212,7 @@ class ContactItem extends React.Component {
                     </a>
                   </li>
                 </ul>
-                <span onClick={this.Cool} className={starStat}>
-                  <i className="fa fa-star"></i>
-                </span>
-                <span onClick={this.Cool2} className={starStat2}>
-                  <i className="fa fa-star"></i>
-                </span>
-                <span onClick={this.Cool3} className={starStat3}>
-                  <i className="fa fa-star"></i>
-                </span>
-                <span onClick={this.Cool4} className={starStat4}>
-                  <i className="fa fa-star"></i>
-                </span>
-                <span onClick={this.Cool5} className={starStat5}>
+                <span onClick={this.props.StarFavor} className={starStat}>
                   <i className="fa fa-star"></i>
                 </span>
 
@@ -256,4 +228,3 @@ class ContactItem extends React.Component {
   }
 }
 export default ContactItem;
-

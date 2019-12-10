@@ -19,7 +19,7 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:false
+        favorite: false
       },
 
       {
@@ -35,7 +35,7 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:false
+        favorite: false
       },
 
       {
@@ -50,7 +50,7 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:false
+        favorite: false
       },
 
       {
@@ -65,7 +65,7 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:false
+        favorite: false
       },
 
       {
@@ -80,33 +80,46 @@ class App extends React.Component {
           "jobs/search?keywords=Senior%20Information%20Technology%20Business%20Analyst&location=Ровенская%20область%2C%20Украина&trk=guest_job_search_jobs-search-bar_search-submit&redirect=false&position=1&pageNum=0",
         skype: "uk",
         messager: "uk/mm",
-        favorite:false
+        favorite: false
       }
     ]
   };
-  
+
   onDelete = id => {
     const index = this.state.List.findIndex(elem => elem.id === id);
     let newList = [];
     let counter = 0;
-    for (let i = 0; i < this.state.List.length; i++){
+    for (let i = 0; i < this.state.List.length; i++) {
       if (i !== index) {
-      newList[counter] = this.state.List[i];
-      counter++;
+        newList[counter] = this.state.List[i];
+        counter++;
       }
     }
-  
-      
-    this.setState(state =>{
-      return{
+
+    this.setState(state => {
+      return {
         List: newList
       };
     });
   };
-  
-  
-      
-  
+
+  StarFavor = id => {
+    const index = this.state.List.findIndex(elem => elem.id === id);
+    let newList = this.state.List.slice();
+    newList[index].favorite = !newList[index].favorite;
+
+    if (newList[index].favorite) {
+      newList[index].id = newList[index].id * 10;
+    } else {
+      newList[index].id = newList[index].id / 10;
+    }
+
+    this.setState(state => {
+      return {
+        List: newList
+      };
+    });
+  };
 
   render() {
     return (
@@ -118,6 +131,7 @@ class App extends React.Component {
         <ContactList
           ContactList={this.state.List}
           onDelete={this.onDelete}
+          StarFavor={this.StarFavor}
         ></ContactList>
       </div>
     );
@@ -125,4 +139,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
