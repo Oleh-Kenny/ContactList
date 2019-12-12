@@ -9,6 +9,7 @@ import NotFound from "./components/NotFound/NotFound";
 import Edit from "./components/Edit/Edit";
 import MainMenue from "./components/menu/menu";
 class App extends React.Component {
+  id=100;
   state = {
     List: [
       {
@@ -112,8 +113,6 @@ class App extends React.Component {
     let newList = this.state.List.slice();
     newList[index].favorite = !newList[index].favorite;
 
-   
-
     this.setState(() => {
       return {
         favorite: newList
@@ -121,35 +120,58 @@ class App extends React.Component {
     });
   };
 
+  onAddNewContact = (name, description, avatar, gender) => {
+    this.id++;
+    const newContact={
+      id: this.id,
+      name:name,
+      description:description,
+      avatar:avatar,
+      gender:gender,
+      favorite: false
+    };
+     const newContactArr=[...this.state.List, newContact];
+     this.setState(() => {
+      return {
+        List:newContactArr
+      };
+    });
+    
+  };
+
   render() {
     return (
       <Router>
-<div className="container bootstrap snippet">
-<MainMenue></MainMenue>
-<Switch>
-<Route
-path="/"
-exact
-component={() => (
-<ContactList
-          ContactList={this.state.List}
-          onDelete={this.onDelete}
-          StarFavor={this.StarFavor}
-        ></ContactList>
-)}
-></Route>
-<Route path="/about" exact component={About}></Route>
-<Route path="/add" exact component={AddContact}></Route>
-<Router path="/edit" exact component={Edit}></Router>
-<Router path="*" exact component={NotFound}></Router>
-
-</Switch>
-</div>
-</Router>
-
+        <div className="container bootstrap snippet">
+          <MainMenue></MainMenue>
+          <Switch>
+            <Route
+              path="/"
+              exact
+              component={() => (
+                <ContactList
+                  ContactList={this.state.List}
+                  onDelete={this.onDelete}
+                  StarFavor={this.StarFavor}
+                  onAddNewContact={this.onAddNewContact}
+                ></ContactList>
+              )}
+            ></Route>
+            <Route path="/about" exact component={About}></Route>
+            <Route
+              path="/add"
+              exact
+              component={() => (
+                <AddContact onAddNewContact={this.onAddNewContact} />
+              )}
+            ></Route>
+            <Router path="/edit" exact component={Edit}></Router>
+            <Router path="*" exact component={NotFound}></Router>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
-
 
 ReactDOM.render(<App />, document.getElementById("root"));

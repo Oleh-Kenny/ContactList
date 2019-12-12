@@ -22,6 +22,8 @@ const ContactList = ({ ContactList, onDelete, StarFavor }) => {
         favorite={item.favorite}
         onDelete={() => onDelete(item.id)}
         StarFavor={() => StarFavor(item.id)}
+        
+        
       ></ContactItem>
     );
   });
